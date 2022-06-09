@@ -12,4 +12,7 @@ numbers.forEach((number) => {
     })
 })
 
+let prevNumber = '';
+let calculationOperator = '';
+let currentNumber = '0';
 
