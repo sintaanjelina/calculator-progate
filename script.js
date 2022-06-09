@@ -6,3 +6,9 @@ numbers.forEach((number) => {
         console.log(event.target.value, "number is pressed");
     })
 })
+
+const calculatorScreen = document.querySelector(".calculator-screen");
+
+const updateScreen = (number) => {
+    calculatorScreen.value = number;
+}
