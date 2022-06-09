@@ -10,6 +10,9 @@ let calculationOperator = '';
 let currentNumber = '0';
 
 const inputDecimal = (dot) => {
+    if (currentNumber.includes('.')) {
+        return;
+    }
     currentNumber += dot;
 }
 
