@@ -10,13 +10,17 @@ const updateScreen = (number) => {
 }
 
 const inputNumber = (number) => {
-    currentNumber += number;
+    if (currentNumber === '0') {
+        currentNumber = number;
+    } else {
+        currentNumber += number;
+    }
 }
 
 numbers.forEach((number) => {
     console.log(number);
     number.addEventListener("click", (event) => {
         inputNumber(event.target.value);
-        updateScreen(event.target.value);
+        updateScreen(currentNumber);
     })
 })
