@@ -1,10 +1,36 @@
 const numbers = document.querySelectorAll(".number");
 const calculatorScreen = document.querySelector(".calculator-screen");
 const operators = document.querySelectorAll(".operator");
+const equalSign = document.querySelector(".equal-sign");
 
 let prevNumber = '';
 let calculationOperator = '';
 let currentNumber = '0';
+
+equalSign.addEventListener('click', () => {
+    console.log("equal button is clicked");
+})
+
+const calculate = () => {
+    let result = '';
+    switch (calculationOperator) {
+        case '+':
+            result = prevNumber + currentNumber;
+            break;
+        case '-':
+            result = prevNumber - currentNumber;
+            break;
+        case '*':
+            result = prevNumber * currentNumber;
+            break;
+        case '/':
+            result = prevNumber / currentNumber;
+            break;
+        default:
+            break;
+    }
+
+}
 
 const inputOperator = (operator) => {
     prevNumber = currentNumber;
