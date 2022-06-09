@@ -9,6 +9,9 @@ let prevNumber = '';
 let calculationOperator = '';
 let currentNumber = '0';
 
+const inputDecimal = (dot) => {
+    currentNumber += dot;
+}
 
 const clearAll = () => {
     prevNumber = '';
@@ -81,5 +84,6 @@ equalSign.addEventListener('click', () => {
 })
 
 decimal.addEventListener('click', (event) => {
-    console.log(event.target.value);
+    inputDecimal(event.target.value);
+    updateScreen(currentNumber);
 })
