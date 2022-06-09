@@ -1,5 +1,12 @@
 const numbers = document.querySelectorAll(".number");
 const calculatorScreen = document.querySelector(".calculator-screen");
+const operators = document.querySelectorAll(".operator");
+
+operators.forEach((operator) => {
+    operator.addEventListener("click", (event) => {
+        console.log(event.target.value);
+    })
+})
 
 let prevNumber = '';
 let calculationOperator = '';
