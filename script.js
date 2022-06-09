@@ -29,7 +29,8 @@ const calculate = () => {
         default:
             break;
     }
-
+    currentNumber = result;
+    calculationOperator = "";
 }
 
 const inputOperator = (operator) => {
