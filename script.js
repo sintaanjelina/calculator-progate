@@ -45,10 +45,11 @@ const calculate = () => {
 }
 
 const inputOperator = (operator) => {
-    prevNumber = currentNumber;
+    if (calculationOperator == "") {
+        prevNumber = currentNumber;
+    }
     calculationOperator = operator;
-    currentNumber = '';
-
+    currentNumber = "";
 }
 
 operators.forEach((operator) => {
