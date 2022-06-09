@@ -3,6 +3,7 @@ const calculatorScreen = document.querySelector(".calculator-screen");
 const operators = document.querySelectorAll(".operator");
 const equalSign = document.querySelector(".equal-sign");
 const clearBtn = document.querySelector(".all-clear");
+const decimal = document.querySelector(".decimal");
 
 let prevNumber = '';
 let calculationOperator = '';
@@ -79,3 +80,6 @@ equalSign.addEventListener('click', () => {
     updateScreen(currentNumber);
 })
 
+decimal.addEventListener('click', (event) => {
+    console.log(event.target.value);
+})
