@@ -10,7 +10,7 @@ const updateScreen = (number) => {
 }
 
 const inputNumber = (number) => {
-    currentNumber = number;
+    currentNumber += number;
 }
 
 numbers.forEach((number) => {
