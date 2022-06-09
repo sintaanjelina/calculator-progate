@@ -7,24 +7,20 @@ let prevNumber = '';
 let calculationOperator = '';
 let currentNumber = '0';
 
-equalSign.addEventListener('click', () => {
-    console.log("equal button is clicked");
-})
-
 const calculate = () => {
     let result = '';
     switch (calculationOperator) {
         case '+':
-            result = prevNumber + currentNumber;
+            result = parseFloat(prevNumber) + parseFloat(currentNumber);
             break;
         case '-':
-            result = prevNumber - currentNumber;
+            result = parseFloat(prevNumber) - parseFloat(currentNumber);
             break;
         case '*':
-            result = prevNumber * currentNumber;
+            result = parseFloat(prevNumber) * parseFloat(currentNumber);
             break;
         case '/':
-            result = prevNumber / currentNumber;
+            result = parseFloat(prevNumber) / parseFloat(currentNumber);
             break;
         default:
             break;
@@ -32,6 +28,11 @@ const calculate = () => {
     currentNumber = result;
     calculationOperator = "";
 }
+
+equalSign.addEventListener('click', () => {
+    calculate()
+    updateScreen(currentNumber);
+})
 
 const inputOperator = (operator) => {
     prevNumber = currentNumber;
