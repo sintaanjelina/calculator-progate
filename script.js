@@ -54,6 +54,7 @@ const calculate = () => {
         calculationOperator = "";
         return;
     }
+
     switch (calculationOperator) {
         case '+':
             result = parseFloat(prevNumber) + parseFloat(currentNumber);
@@ -101,6 +102,9 @@ operators.forEach((operator) => {
 })
 
 const updateScreen = (number) => {
+    if (isNaN(number)) {
+        calculatorScreen.value = "error";
+    }
     calculatorScreen.value = number;
 }
 
@@ -115,7 +119,7 @@ const updateHistory = (number) => {
 }
 
 const inputNumber = (number) => {
-    if (currentNumber === '0' || parseFloat(currentNumber) === 0) {
+    if (currentNumber === '0' || parseFloat(currentNumber) === 0 || currentNumber == "Infinity") {
         currentNumber = number;
     } else {
         currentNumber += number;
