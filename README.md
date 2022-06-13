@@ -1,2 +1,2 @@
 # calculator-progate
-Contoh dari mentor kelas C - progate kak bagas
+Contoh dari mentor kelas C - progate kak bagas beserta modifikasi yang saya lakukan berdasarkan materi yang didapatkan dari kelas dan feedback dari peserta lain maupun group telegram.
