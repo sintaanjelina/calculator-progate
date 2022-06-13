@@ -119,7 +119,7 @@ const updateHistory = (number) => {
 }
 
 const inputNumber = (number) => {
-    if (currentNumber === '0' || parseFloat(currentNumber) === 0 || currentNumber == "Infinity") {
+    if (currentNumber === '0' || parseFloat(currentNumber) === 0 || currentNumber == "Infinity" || isNaN(currentNumber)) {
         currentNumber = number;
     } else {
         currentNumber += number;
