@@ -38,7 +38,7 @@ const calculate = () => {
             result = parseFloat(prevNumber) / parseFloat(currentNumber);
             break;
         default:
-            break;
+            return;
     }
     currentNumber = result;
     calculationOperator = "";
@@ -83,7 +83,7 @@ clearBtn.addEventListener('click', () => {
 })
 
 equalSign.addEventListener('click', () => {
-    calculate()
+    calculate();
     updateScreen(currentNumber);
 })
 
