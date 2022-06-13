@@ -115,7 +115,7 @@ const updateHistory = (number) => {
 }
 
 const inputNumber = (number) => {
-    if (currentNumber === '0') {
+    if (currentNumber === '0' || parseFloat(currentNumber) === 0) {
         currentNumber = number;
     } else {
         currentNumber += number;
@@ -125,7 +125,7 @@ const inputNumber = (number) => {
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
         inputNumber(event.target.value);
-        // updateHistory(event.target.value);
+        // console.log(currentNumber)
         updateScreen(currentNumber);
     })
 })
