@@ -85,6 +85,7 @@ clearBtn.addEventListener('click', () => {
 equalSign.addEventListener('click', () => {
     calculate();
     updateScreen(currentNumber);
+    clearAll();
 })
 
 decimal.addEventListener('click', (event) => {
